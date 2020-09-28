@@ -16,11 +16,11 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row" *ngIf="cliente.id">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>ID: </label>
-                    <input type="text" class="form-control" disabled="true" [ngModel]="cliente.id" name="" id="">
+                    <input type="text" class="form-control" disabled="true" [ngModel]="cliente.id" name="id" id="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -29,6 +29,9 @@
                     <input type="text" class="form-control" disabled="true" [ngModel]="cliente.dataCadastro" name="dataCadastro" id="">
                 </div>
             </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Nome: *</label>
