@@ -11,6 +11,7 @@ import { Cliente } from '../clientes';
 export class ListaComponent implements OnInit {
 
   clientes: Cliente[] = [];
+  clienteSelecionado: Cliente;
 
   constructor(
     private service: ClientesService,
@@ -25,6 +26,10 @@ export class ListaComponent implements OnInit {
 
   novoCadastro(): void {
     this.router.navigate(['clientes-form']);
+  }
+
+  preparaDelecao( cliente: Cliente): void{
+    this.clienteSelecionado = cliente;
   }
 
 }
