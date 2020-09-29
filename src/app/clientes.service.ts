@@ -37,4 +37,9 @@ export class ClientesService {
   atualizar(cliente: Cliente) : Observable<any> {
     return this.httpClient.put<any>(`http://localhost:8080/api/clientes/${cliente.id}`, cliente);
   }
+
+  
+  deletar(cliente: Cliente) : Observable<any> {
+    return this.httpClient.delete<any>(`http://localhost:8080/api/clientes/${cliente.id}`);
+  }
 }
