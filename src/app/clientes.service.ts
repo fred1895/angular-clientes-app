@@ -17,7 +17,7 @@ export class ClientesService {
   }
 
   getClientes(): Observable<Cliente[]> {
-    return null;
+    return this.httpClient.get<Cliente[]>('http://localhost:8080/api/clientes');
   }
 
   getMockClientes(): Cliente[] {
@@ -28,5 +28,9 @@ export class ClientesService {
     cliente.dataCadastro = "20/09/2020";
 
     return [cliente];
+  }
+  
+  getClienteById(id: number) : Observable<Cliente> {
+    return this.httpClient.get<any>(`http://localhost:8080/api/clientes/${id}`);
   }
 }
