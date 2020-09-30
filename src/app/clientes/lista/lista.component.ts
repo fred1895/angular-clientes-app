@@ -30,7 +30,7 @@ export class ListaComponent implements OnInit {
     this.router.navigate(['clientes-form']);
   }
 
-  preparaDelecao( cliente: Cliente): void{
+  preparaDelecao(cliente: Cliente): void{
     this.clienteSelecionado = cliente;
   }
 
