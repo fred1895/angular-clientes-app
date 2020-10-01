@@ -27,7 +27,7 @@ export class ListaComponent implements OnInit {
   }
 
   novoCadastro(): void {
-    this.router.navigate(['clientes-form']);
+    this.router.navigate(['clientes/form']);
   }
 
   preparaDelecao(cliente: Cliente): void{
