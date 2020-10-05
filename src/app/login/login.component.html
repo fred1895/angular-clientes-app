@@ -14,8 +14,8 @@
                                 <div class="alert alert-success" *ngIf="mensagemSucesso">
                                     {{ mensagemSucesso }} 
                                 </div>
-                                <div class="alert alert-danger" *ngIf="loginError">
-                                    Login e/ou senha incorretos. 
+                                <div class="alert alert-danger" *ngFor="let erro of erros">
+                                    {{ erro }} 
                                 </div>
 
                                 <form #loginForm="ngForm" (submit)="onSubmit()">
