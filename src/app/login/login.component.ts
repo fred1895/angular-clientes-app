@@ -42,6 +42,10 @@ export class LoginComponent {
     .salvar(usuario)
     .subscribe(response => {
       this.mensagemSucesso = "Cadastro realizado com sucesso. Efetue o login.";
+      this.cadastrando = false;
+      this.username = '';
+      this.password = '';
+      this.erros = [];
     }, errorResponse => {
       this.mensagemSucesso = null;
       this.erros = errorResponse.error.erros;
